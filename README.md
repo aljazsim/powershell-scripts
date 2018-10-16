@@ -69,7 +69,7 @@ If you want to convert an entire directory of SVG files to PNG files, you can us
 
 ```powershell
 Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToPng.ps1 -source $_.FullName -destination ".\pngs\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).png" -width 300 }
-```powershell
+```
 
 ### Script
 
@@ -95,7 +95,7 @@ If you want to convert an entire directory of SVG files to ICO files, you can us
 
 ```powershell
 Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToIco.ps1 -source $_.FullName -destination ".\icos\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).ico" }
-```powershell
+```
 
 ### Script
 
