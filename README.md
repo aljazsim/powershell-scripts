@@ -1,5 +1,5 @@
 # Useful PowerShell scripts
-This is a collection of useful PowerShell scripts. In order to run the scripts from PowerShell make sure you have the appropriate ![execution policy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6 "execution policy") set.
+This is a collection of useful PowerShell scripts. In order to run the scripts from PowerShell make sure you have the appropriate ![execution policy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6){:target="_blank"} set.
 
 ## Publish a NuGet package
 
