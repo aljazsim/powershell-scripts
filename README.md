@@ -46,6 +46,31 @@ Parameters:
 
 See script ![here](./Scripts/generateUnitTestCodeCoverage.ps1 "Here").
 
+## Resize image
+
+This script will resize the specified image.
+
+Make sure you have the following applications installed:
+* ImageMagick (https://www.imagemagick.org/).
+
+```powershell
+.\resizeImage.ps1 -source ".\icon.png" -destination ".\resized\icon.png" -width 300
+```
+
+Parameters:
+* -source: the source file path,
+* -destination: the destination file path,
+* -width: the destination file width in pixels,
+* -height: the destination file height in pixels.
+
+Either destination file width, height or both have to be specified.
+
+If you want to resize an entire directory of image files, you can use this snippet:
+
+```powershell
+Get-ChildItem "." -Filter "*.png" | ForEach-Object { .\resizeImage.ps1 -source $_.FullName -destination ".\resized\$($_.Name)" -width 300 }
+```
+
 ## Convert SVG image to PNG format
 
 This script generates a PNG format icon from an SVG source file with the specified dimensions.
@@ -68,7 +93,7 @@ Either destination file width, height or both have to be specified.
 If you want to convert an entire directory of SVG files to PNG files, you can use this snippet:
 
 ```powershell
-Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToPng.ps1 -source $_.FullName -destination ".\pngs\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).png" -width 300 }
+Get-ChildItem ".\svgs" -Filter "*.svg" | ForEach-Object { .\convertSvgToPng.ps1 -source $_.FullName -destination ".\pngs\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).png" -width 300 }
 ```
 
 ### Script
@@ -94,7 +119,7 @@ Parameters:
 If you want to convert an entire directory of SVG files to ICO files, you can use this snippet:
 
 ```powershell
-Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToIco.ps1 -source $_.FullName -destination ".\icos\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).ico" }
+Get-ChildItem ".\svgs" -Filter "*.svg" | ForEach-Object { .\convertSvgToIco.ps1 -source $_.FullName -destination ".\icos\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).ico" }
 ```
 
 ### Script
