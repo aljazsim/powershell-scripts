@@ -65,6 +65,12 @@ Parameters:
 
 Either destination file width, height or both have to be specified.
 
+If you want to convert an entire directory of SVG files to PNG files, you can use this snippet:
+
+```powershell
+Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToPng.ps1 -source $_.FullName -destination ".\pngs\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).png" -width 300 }
+```powershell
+
 ### Script
 
 See script ![here](./Scripts/convertSvgToPng.ps1 "Here")
@@ -84,6 +90,12 @@ Make sure you have the following applications installed:
 Parameters:
 * -source: the source file path in SVG format,
 * -destination: the destination file path in ICO format.
+
+If you want to convert an entire directory of SVG files to ICO files, you can use this snippet:
+
+```powershell
+Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToIco.ps1 -source $_.FullName -destination ".\icos\$([System.IO.Path]::GetFileNameWithoutExtension($_.Name)).ico" }
+```powershell
 
 ### Script
 

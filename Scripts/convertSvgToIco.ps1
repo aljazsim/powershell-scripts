@@ -10,6 +10,7 @@ $magick = "C:\Program Files\ImageMagick-7.0.8-Q16\magick.exe"
 $tempDirectoryPath = [System.IO.Path]::GetFullPath(".\temp")
 $sourceFilePath = [System.IO.Path]::GetFullPath($source)
 $destinationFilePath = [System.IO.Path]::GetFullPath($destination)
+$destinationDirectoryPath = [System.IO.Path]::GetDirectoryName($destinationFilePath)
 
 # validate parameters
 if (-not (Test-Path -Path $inkscape))
@@ -31,6 +32,11 @@ if (-not (Test-Path -Path $sourceFilePath))
 if (Test-Path -Path $destinationFilePath)
 {
 	Remove-Item -Path $destinationFilePath -Force
+}
+
+if (-not (Test-Path -Path $destinationDirectoryPath))
+{
+	New-Item -Path "$destinationDirectoryPath" -ItemType Directory
 }
 
 if (Test-Path -Path $tempDirectoryPath)
