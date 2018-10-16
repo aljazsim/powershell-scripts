@@ -1,7 +1,7 @@
 # Useful PowerShell scripts
 In order to run the scripts from PowerShell make sure you have the appropriate execution policy set.
 
-## Publish NuGet package
+## Publish a NuGet package
 
 This script publishes a NuGet package to https://www.nuget.org/ for a .NET project.
 
@@ -22,15 +22,15 @@ Parameters:
 
 See script ![here](./Scripts/publishNuGetPackage.ps1 "Here").
 
-## Generate unit test code coverage
+## Generate a unit test project code coverage
 
-This scripts generates unit test project code coverage for a .NET solution.
+This scripts generates a unit test project code coverage for a .NET solution.
 
 Make sure you have the following applications installed:
 * Build Tools for Visual Studio 2017 (https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017),
 * VS test console (comes with Visual Studio),
 * Open Cover Console (install OpenCover NuGet package into your unit test project),
-* Report Generator (install ReportGenerator NuGet package into your unit test project),
+* Report Generator (install ReportGenerator NuGet package into your unit test project).
 
 ```powershell
 .\generateUnitTestCodeCoverage.ps1 -solutionFilePath "PathTo\Solution.sln" -unitTestDllFilePath "PathTo\ProjectUnitTest.dll" -openCoverConsole "PathTo\OpenCover.Console.exe" -reportGenerator "PathTo\ReportGenerator.exe"
