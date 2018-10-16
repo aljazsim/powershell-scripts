@@ -46,7 +46,7 @@ Parameters:
 
 See script ![here](./Scripts/generateUnitTestCodeCoverage.ps1 "Here").
 
-## Resize image
+## Resize an image
 
 This script will resize the specified image.
 
@@ -70,6 +70,10 @@ If you want to resize an entire directory of image files, you can use this snipp
 ```powershell
 Get-ChildItem "." -Filter "*.png" | ForEach-Object { .\resizeImage.ps1 -source $_.FullName -destination ".\resized\$($_.Name)" -width 300 }
 ```
+
+### Script
+
+See script ![here](./Scripts/resizeImage.ps1 "Here").
 
 ## Convert SVG image to PNG format
 
