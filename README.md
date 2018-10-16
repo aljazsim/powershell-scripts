@@ -20,7 +20,7 @@ Parameters:
 
 ### Script
 
-See script ![here](./Scripts/publishNuGetPackage.ps1 "Here")
+See script ![here](./Scripts/publishNuGetPackage.ps1 "Here").
 
 ## Generate unit test code coverage
 
@@ -44,7 +44,7 @@ Parameters:
 
 ### Script
 
-See script ![here](./Scripts/generateUnitTestCodeCoverage.ps1 "Here")
+See script ![here](./Scripts/generateUnitTestCodeCoverage.ps1 "Here").
 
 ## Convert SVG image to PNG format
 
@@ -73,7 +73,7 @@ Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToPng.ps1 -so
 
 ### Script
 
-See script ![here](./Scripts/convertSvgToPng.ps1 "Here")
+See script ![here](./Scripts/convertSvgToPng.ps1 "Here").
 
 ## Convert SVG image to ICO format
 
@@ -99,4 +99,4 @@ Get-ChildItem ".\svgs" -Filter *.svg | ForEach-Object {.\convertSvgToIco.ps1 -so
 
 ### Script
 
-See script ![here](./Scripts/convertSvgToIco.ps1 "Here")
+See script ![here](./Scripts/convertSvgToIco.ps1 "Here").
