@@ -30,12 +30,12 @@ if (-not (Test-Path -Path $sourceFilePath))
 # clean up
 if (Test-Path -Path $destinationFilePath)
 {
-	Remove-Item -Path $destinationFilePath
+	Remove-Item -Path $destinationFilePath -Force
 }
 
 if (Test-Path -Path $tempDirectoryPath)
 {
-	Remove-Item -Path "$tempDirectoryPath\*.*"
+	Remove-Item -Path "$tempDirectoryPath\*.*" -Recurse -Force
 }
 else
 {

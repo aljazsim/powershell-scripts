@@ -33,7 +33,7 @@ if (Test-Path "$testResultDirectory")
 
 if (Test-Path "$openCoverReport")
 {
-	Remove-Item -Path "$openCoverReport"
+	Remove-Item -Path "$openCoverReport" -Force
 }
 
 New-Item -ItemType Directory "$outputDirectory"
@@ -62,4 +62,4 @@ Write-Output "------------------------------------------------------- cleaning u
 Write-Output "`n"
 
 Remove-Item -Path "$testResultDirectory" -Recurse -Force
-Remove-Item -Path "$openCoverReport"
+Remove-Item -Path "$openCoverReport" -Force
