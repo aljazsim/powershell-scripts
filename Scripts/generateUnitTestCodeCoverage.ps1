@@ -5,6 +5,7 @@ param(
 	$reportGenerator = "..\Packages\ReportGenerator.3.1.2\tools\ReportGenerator.exe")
 
 $ErrorPreference = 'Stop'
+[Environment]::CurrentDirectory = $PWD
 
 $vsTestConsole = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
 $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe"

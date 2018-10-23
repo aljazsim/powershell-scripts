@@ -3,6 +3,7 @@ param(
 	$destination = "icon.ico")
 
 $ErrorActionPreference = "Stop"
+[Environment]::CurrentDirectory = $PWD
 
 $inkscape = "C:\Program Files\Inkscape\inkscape.exe"
 $magick = "C:\Program Files\ImageMagick-7.0.8-Q16\magick.exe"
@@ -22,6 +23,8 @@ if (-not (Test-Path -Path $magick))
 {
 	throw "Please install Magick (https://www.imagemagick.org/).";
 }
+
+Write-Output $sourceFilePath
 
 if (-not (Test-Path -Path $sourceFilePath))
 {

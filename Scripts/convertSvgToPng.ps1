@@ -5,6 +5,7 @@ param(
 	$height = $null)
 
 $ErrorActionPreference = "Stop"
+[Environment]::CurrentDirectory = $PWD
 
 $inkscape = "C:\Program Files\Inkscape\inkscape.exe"
 

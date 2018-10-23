@@ -5,6 +5,7 @@ param(
 	$height = 100)
 
 $ErrorActionPreference = "Stop"
+[Environment]::CurrentDirectory = $PWD
 
 $magick = "C:\Program Files\ImageMagick-7.0.8-Q16\magick.exe"
 
